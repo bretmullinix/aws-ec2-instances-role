@@ -121,11 +121,31 @@ None.
 Example Playbook
 ----------------
 
-    - hosts: servers
-      var_files:
-        - vars/main.yml
-      roles:
-         - { role: bmullinix.aws-ec2-instances }
+    ---
+    - name: Create EC2 instance playbook
+      hosts: localhost
+      vars:
+        aws_vpc:
+          name: "aws_openshift_vpc"
+          security_group: "aws_openshift_vpc_security_group"
+          subnets:
+            control:
+              name: "aws_subnet"
+        ec2_instances:
+          - name: nexus-server
+            ami: "ami-00594b9c138e6303d"
+            instance_type: "t2.medium"
+            root_volume_size: 30
+            key_name: "my_keypair"
+            action: "create"
+        aws_region: "{{ lookup('env', 'AWS_REGION') }}"
+        aws_access_key: "{{ lookup('env', 'AWS_ACCESS_KEY_ID') }}"
+        aws_secret_key: "{{ lookup('env', 'AWS_SECRET_ACCESS_KEY') }}"
+      tasks:
+    
+        - name: Create/Delete the EC2 instances
+          import_role:
+            name: aws-ec2-instances-role
 
 
 The **vars/main.yml** should contain the values you are using to override the **default/main.yml**
