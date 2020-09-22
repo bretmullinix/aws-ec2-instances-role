@@ -1,7 +1,7 @@
 Ansible Role: AWS EC2 Instances
 =========
 
-The ansible role is used to create or delete Amazon EC2 Instances.  When creating an instance,
+The ansible role is used to create or delete Amazon EC2 Instances.  When creating instances,
 the role provides the ansible facts, private, and public ip addresses in the **files/ec2_facts** folder.
 
 Requirements

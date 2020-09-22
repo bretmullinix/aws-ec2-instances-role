@@ -3,3 +3,4 @@ private_keys/
 .idea/
 .travis.yml
 .yamllint
+ec2_facts/
