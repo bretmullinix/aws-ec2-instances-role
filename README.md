@@ -16,6 +16,21 @@ Requirements
     1. **boto**
     1. **boto3**
 
+1. An amazon account with the following environment variables set in your **.bashrc** file, or your
+   command shell you plan on using:
+   
+    ```shell script
+     AWS_REGION="<your region>"
+     AWS_ACCESS_KEY_ID="<your amazon access key id>"
+     AWS_SECRET_ACCESS_KEY="<your amazon secret access key id>"
+    ```
+    
+    Replace all text between the double quotes with your Amazon information.
+
+1. Once you pull down the role, create the **files/private\_keys** folder and add the
+   private key you plan on using to this directory.  The file name should be the same as
+   the name of the private key in Amazon.
+   
 Role Variables
 --------------
 
