@@ -148,7 +148,7 @@ Example Playbook
             name: aws-ec2-instances-role
 
 
-The **vars/main.yml** should contain the values you are using to override the **default/main.yml**
+The **vars** should contain the values you are using to override the **default/main.yml**
 role variables.  Look above for a description of those variables.
 
 License
