@@ -1,0 +1,5 @@
+vault_secret
+private_keys/
+.idea/
+.travis.yml
+.yamllint
