@@ -145,7 +145,7 @@ Example Playbook
     
         - name: Create/Delete the EC2 instances
           import_role:
-            name: aws-ec2-instances-role
+          name: aws-ec2-instances-role
 
 
 The **vars** should contain the values you are using to override the **default/main.yml**
@@ -153,6 +153,8 @@ role variables.  Look above for a description of those variables.
 
 Example Output
 --------------
+
+The example output will be in the **aws-ec2-instances-role/files/ec2_facts** folder.
 
 ```text
 name:  nexus-server
