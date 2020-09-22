@@ -151,6 +151,18 @@ Example Playbook
 The **vars** should contain the values you are using to override the **default/main.yml**
 role variables.  Look above for a description of those variables.
 
+Example Output
+--------------
+
+```text
+name:  nexus-server
+public_ip:  100.25.40.101
+private_ip:  10.10.0.10
+key_pair:  my_keypair
+ssh connection: ssh -i /home/bmullini/Documents/redhat_tools/git/repos/playbooks/roles/aws-ec2-instances-role/files/private_keys/my_keypair centos@100.25.40.101
+```
+
+
 License
 -------
 
