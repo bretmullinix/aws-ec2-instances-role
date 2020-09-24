@@ -141,11 +141,9 @@ Example Playbook
         aws_region: "{{ lookup('env', 'AWS_REGION') }}"
         aws_access_key: "{{ lookup('env', 'AWS_ACCESS_KEY_ID') }}"
         aws_secret_key: "{{ lookup('env', 'AWS_SECRET_ACCESS_KEY') }}"
-      tasks:
-    
-        - name: Create/Delete the EC2 instances
-          import_role:
-          name: aws-ec2-instances-role
+      
+      roles:
+        - aws-ec2-instances-role
 
 
 The **vars** should contain the values you are using to override the **default/main.yml**
