@@ -104,7 +104,7 @@ Role Variables
           1. **action** --> The action you want to take on the EC2 instance.  Currently, we have the
              **create**, **delete**, **start**, and **stop** actions.
              
-             **NOTE:** When you stop an EC2 instance, it looses its public ip address unless the
+             **NOTE:** When you stop an EC2 instance, it looses its public IP address unless the
              public IP address is a floating IP.  As a result, the role will output a different
              public IP address when an EC2 instance starts for these scenarios.
           
