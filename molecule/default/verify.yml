@@ -4,5 +4,5 @@
   tasks:
     - name: "Include aws-ec2-instance verify.yml"
       include_role:
-        name: "aws-ec2-instances"
+        name: "aws-ec2-instances-role"
         tasks_from: "verify"
